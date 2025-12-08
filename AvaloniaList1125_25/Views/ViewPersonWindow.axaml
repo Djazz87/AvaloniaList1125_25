@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:AvaloniaList1125_25.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaList1125_25.Views.ViewNoteWindow"
+        x:DataType="models:PersonVM"
+        Title="Подробности" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        
+        <!-- привязки отображают значения вложенного объекта EditNote -->
+        <TextBlock Text="Фио" />
+        <TextBlock Text="{Binding Path=Fio}" />
+        <TextBlock Text="Пол" />
+        <TextBlock Text="{Binding Path=Gender}" />
+        <TextBlock Text="Номер Телефон" />
+        <TextBlock Text="{Binding Path=Phone}" />
+        <TextBlock Text="Адрес" />
+        <TextBlock Text="{Binding Path=Address}" />
+        <TextBlock Text="Дата рождения:" />
+        <TextBlock Text="{Binding Path=DateCreated, StringFormat=dd.MM.yyyy}" />
+    </StackPanel>
+</Window>
